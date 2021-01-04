@@ -1,0 +1,30 @@
+:root {
+    --color-primary:            #F92524;
+    --color-primary-dark:       #E91B1A;
+
+    --color-grey-light-1:       #B6B8BD;
+    --color-grey-light-2:       #ccc;
+
+    --text-color-primary:       #181818;
+    --text-color-secondary:     #7A839E;
+
+    --stars-color:              #FFD500;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5% */
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}

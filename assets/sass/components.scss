@@ -1,0 +1,89 @@
+// ========================================
+// NAVBAR
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 8rem;
+    position: relative;
+
+    &__logo-box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        max-width: 10rem;
+        margin-right: 2rem;
+    }
+
+    &__logo-title {
+        font-size: 5rem;
+        line-height: 9.2rem;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+    }
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 4.5rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            letter-spacing: 0.3rem;
+            border-bottom: 3px solid transparent;
+            font-weight: 300;
+            color: var(--text-color-primary);
+            padding-bottom: 1rem;
+            transition: all 0.2s;
+        } 
+
+        &:hover {
+            border-bottom: 3px solid var(--color-primary);
+        }
+    }
+
+    &__btn {
+        color: #fff;
+        background-color: var(--color-primary);
+        padding: 1rem 2rem;
+        border-radius: 3px;
+        text-decoration: none;
+        font-size: 2rem;
+        border: 1px solid transparent;
+        transition: all 0.2s;
+
+        &:hover {
+            color: var(--color-primary);
+            background-color: #fff;
+            border: 1px solid var(--color-primary);
+        }
+    }
+
+    &__circle-pattern {
+        position: absolute;
+        z-index: -1;
+        top: -40rem;
+        left: -20rem;
+    }
+}
+
+// ========================================
+// HEADINGS
+.heading-h2 {
+    color: var(--text-color-primary);
+    font-size: 4rem;
+    line-height: 5rem;
+    text-transform: capitalize;
+}
