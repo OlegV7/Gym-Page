@@ -6,6 +6,162 @@
     align-items: center;
     padding: 1.5rem 8rem;
     position: relative;
+    transition: all 0.5s;
+
+    @media only screen and (max-width: 1050px){
+        padding: 1.5rem 3rem;
+    }
+
+    @media only screen and (max-width: 550px) {
+        // justify-content: center;
+        margin-bottom: 5rem ;
+    }
+
+    &__box {
+        &--icon {
+            display: none;
+            visibility: hidden;
+
+
+            @media only screen and (max-width: 850px) {
+                display: block;
+                visibility: visible;
+            }
+
+            &:hover {
+                background-color: #fff;
+                box-shadow: 0 1rem 2rem rgba(#000, 0.5);
+            }
+
+            z-index: 100000;
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 5;
+            position: fixed;
+            right: 2rem;
+            transition: all 0.5s;
+            background-color: #fff;
+            box-shadow: 0 1rem 2rem rgba(#000, 0.3);
+    
+            &-btn {
+                width: 4rem;
+                height: 1px; 
+                border-top: 3px solid #000;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 25px;
+                transition: rotate 0.5s;
+            }
+
+            &-top,
+            &-bottom {
+                width: 4rem;
+                height: 1px; 
+                border-top: 3px solid #000;
+                position: absolute;
+                transition: all 0.3s;
+            }
+
+            &-top {
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &-bottom {
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &__active-top {
+        top: 50%;
+        left: 22.5%;
+        transform: rotate(220deg);
+    }
+
+    &__active-main {
+        border-top: 3px solid transparent;
+    }
+
+    &__active-bottom {
+        top: 50%;
+        left: 22.5%;
+        transform: rotate(-220deg);
+    }
+
+    &__list--mobile {
+        position: fixed;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        background-color: rgba($color-primary, 0.9);
+        height: 100%;
+        width: 100%;
+        z-index: 500;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+    
+        &-toggle {
+            transition: all 0.5s;
+            left: -80%;
+        }
+    }
+
+    &__item--mobile {
+        &:not(:last-child) {
+            margin-bottom: 8rem;
+        }
+    }
+
+    &__link--mobile {
+        &:link,
+        &:visited {
+            font-size: 3rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            background-color: #fff;
+            border: 1px solid transparent;
+            padding: 2rem 3rem;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: rgba($color-primary, 0.5);
+            border: 1px solid #fff;
+        }
+    }
+
+    &__btn--mobile {
+        padding: 2rem 3rem;
+        font-size: 3rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: rgba($color-primary, 0.5);
+        border: 1px solid #fff;
+        transition: all 0.2s;
+        border-radius: 3px;
+
+        &:hover {
+            color: var(--color-primary);
+            background-color: #fff;
+            border: 1px solid var(--color-primary);
+        }
+    }
 
     &__logo-box {
         display: flex;
@@ -26,12 +182,28 @@
     &__list {
         list-style: none;
         display: flex;
+
+        @media only screen and (max-width: 850px) {
+            display: none;
+            visibility: hidden;
+        }
     }
 
     &__item {
-
         &:not(:last-child) {
             margin-right: 4.5rem;
+        }
+
+        @media only screen and (max-width: 1450px) {
+            &:not(:last-child) {
+                margin-right: 3.5rem;
+            }
+        }
+
+        @media only screen and (max-width: 1250px) {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
         }
     }
 
@@ -76,6 +248,7 @@
         z-index: -1;
         top: -40rem;
         left: -20rem;
+        width: 100%;
     }
 }
 

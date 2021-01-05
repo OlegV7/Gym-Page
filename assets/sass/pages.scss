@@ -5,8 +5,16 @@
     justify-content: space-evenly;
     align-items: center;
 
+    @media only screen and (max-width: 650px) {
+        flex-direction: column;
+    }
+
     &__text {
         width: 45vw;
+    
+        @media only screen and (max-width: 650px) {
+            width: 75vw;
+        }
     }
 
     &__text-primary {
@@ -74,6 +82,10 @@
 
     &__image {
         width: 40vw;
+        
+        @media only screen and (max-width: 650px) {
+            margin-top: 5rem;
+        }
     }
 
     &__img {
@@ -89,16 +101,33 @@
     margin-top: 6rem;
     position: relative;
 
+    @media only screen and (max-width: 600px) {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
     &__pattern-img {
         position: absolute;
         left: -2rem;
         top: -5rem;
         z-index: -1;
         height: 100vh;
+
+        @media only screen and (max-width: 1200px) {
+            height: 70vh;
+        }
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }   
     }
 
     &__image {
         width: 30vw;
+
+        @media only screen and (max-width: 600px) {
+            width: 50vw;
+        }
     }
 
     &__img {
@@ -107,6 +136,11 @@
 
     &__story {
         width: 45vw;
+
+        @media only screen and (max-width: 600px) {
+            width: 80vw;
+        }
+        // background-color: rgba(#fff, 0.9);
     }
 
     &__title {
@@ -183,10 +217,20 @@
 .classes {
     position: relative;
     padding: 10rem 15rem;
+
+    @media only screen and (max-width: 650px) {
+        padding: 3.5rem 7rem;
+    }
     
     &__header {
         display: flex;
         align-items: center;
+    
+        @media only screen and (max-width: 650px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
     }
 
     &__heading {
@@ -207,6 +251,11 @@
         list-style: none;
         display: flex;
         margin-right: 8rem;
+    
+        @media only screen and (max-width: 650px) {
+            margin-right: 3rem;
+            margin-top: 5rem;
+        }
     }
 
     &__item {
@@ -269,6 +318,11 @@
         font-weight: 300;
         line-height: 2.5rem;
         width: 70vw;
+
+        @media only screen and (max-width: 650px) {
+            margin: 0 auto;
+            width: 80vw;
+        }        
     }
 
     &__pattern-image {
@@ -281,6 +335,11 @@
     &__card-group {
         display: flex;
         justify-content: space-evenly;
+
+        @media only screen and (max-width: 900px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__card {
@@ -297,6 +356,10 @@
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 2rem 4rem rgba(#000, 0.5);
         }
+
+        @media only screen and (max-width: 900px) {
+            margin: 3rem 0;
+        }
     }
 
     &__card-image {
@@ -308,6 +371,10 @@
         padding: 2rem;
         background-color: var(--color-primary);
         margin-top: -1rem;
+
+        @media only screen and (max-width: 1400px) {
+            padding: 1rem;
+        }
     }
 
     &__card-title {
@@ -326,6 +393,10 @@
         img {
             margin-right: 1rem;
         }
+
+        @media only screen and (max-width: 1200px) {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -333,8 +404,12 @@
 // TRAINERS
 .trainers {
     position: relative;
-    padding-bottom: 20rem;
+    padding-bottom: 10rem;
 
+    @media only screen and (max-width: 600px) {
+        padding-bottom: 5rem;
+    }
+    
     &__pattern {
         position: absolute;
         top: 60%;
@@ -381,6 +456,18 @@
 
         & > div > img {
             width: 100%;
+        }
+
+        @media only screen and (max-width: 900px) {
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, minmax(20rem, 1fr));
+        }
+
+        @media only screen and (max-width: 650px) {
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(1, minmax(20rem, 1fr));
+            // margin: 0 auto;
+            background-color: #fff;
         }
     }
 
@@ -453,6 +540,10 @@
     text-align: center;
     padding: 10rem 15rem;
 
+    @media only screen and (max-width: 900px) {
+        padding: 5rem;
+    }
+
     &__heading {
         position: relative;
 
@@ -480,6 +571,10 @@
         justify-content: space-evenly;
         align-items: center;
         margin-top: 5rem;
+
+        @media only screen and (max-width: 650px) {
+            flex-direction: column;
+        }
     }
 
     &__card {
@@ -585,6 +680,10 @@
     &__heading {
         display: flex;
         padding: 3rem 15rem;
+
+        @media only screen and (max-width: 650px) {
+            padding: 5rem;
+        }
     }
 
     &__heading-title {
@@ -610,11 +709,17 @@
         padding: 0 15rem 3rem 15rem;
         margin-bottom: 4rem;
         text-align: left;
+
+        @media only screen and (max-width: 650px) {
+            width: 100%;
+            padding: 0 2rem;
+        }
     }
 
     &__group {
         margin-top: 5rem;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 
@@ -627,6 +732,7 @@
         box-shadow: 0px 3px 20px #707070;
         padding: 12rem 3rem 3rem 3rem;
         background-color: #fff;
+        margin: 3rem;
 
         &::after {
             content: "\201D";
@@ -688,13 +794,23 @@
     padding: 8rem 15rem;
     color: #fff;
 
+    @media only screen and (max-width: 650px) {
+        padding: 2rem 5rem;
+    }
+
     &__flex {
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: 800px) {
+            flex-direction: column;
+        }
     }
 
     &__logo-group {
-
+        @media only screen and (max-width: 800px) {
+            text-align: center;
+        }
     }
 
     &__logo {
@@ -709,6 +825,10 @@
         font-weight: 300;
         width: 70%;
         margin-bottom: 3rem;
+    
+        @media only screen and (max-width: 800px) {
+            margin: 3rem auto;
+        }
     }
 
     &__social-media {
@@ -759,7 +879,11 @@
 
     &__info-group {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
+
+        & > *:not(:last-child) {
+            margin-right: 5rem;
+        }
     }
 
     &__address {
